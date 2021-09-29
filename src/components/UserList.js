@@ -3,10 +3,12 @@ import UserListItem from "./UserListItem";
 import UsersContainer from "./UI/UsersContainer";
 
 function UserList(props){
-	
+
 	return (
 		<UsersContainer>
-			{ props.data.map(obj => <UserListItem key={Math.random()} data={obj} />) }
+			<div className="user__list">
+				{ props.data.map(obj => <UserListItem key={Math.random()} data={obj} />) }
+			</div>
 		</UsersContainer>
 	)
 }
