@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import Form from './components/Form';
 import UserList from './components/UserList'
@@ -14,7 +14,7 @@ function App() {
 
 	return (
 		<div className="app">
-			<Form setUserState={setUserState}/>
+			<Form updateUserState={setUserState} currentState={[useState]}/>
 			<UserList  data={userState}/>
 		</div>
 	)
