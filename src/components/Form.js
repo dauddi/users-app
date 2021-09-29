@@ -13,6 +13,8 @@ function Form(props){
 
 		if (nameInput && ageInput) newUser = new User(nameInput, ageInput)
 		props.updateUserState([newUser, ...props.currentState])
+		setNameInput('')
+		setAgeInput('')
 	}
 
 	return (
@@ -21,18 +23,16 @@ function Form(props){
 
 			<div className="form-group">
 				<label htmlFor="user_name">User Name:</label>
-				<input onChange={(e) => setNameInput(e.target.value)} type="text" name="user_name" required />
+				<input onChange={(e) => setNameInput(e.target.value)} value={nameInput} type="text" name="user_name" required autoCapitalize />
 			</div>
 
 			<div className="form-group">
 				<label htmlFor="age">Age (years):</label>
-				<input onChange={(e) => setAgeInput(e.target.value)} type="number" name="age" min="1" required />
+				<input onChange={(e) => setAgeInput(e.target.value)} value={ageInput} type="number" name="age" min="1" required />
 			</div>
 			
-			<div className="form-group form-group-btn">
-				<Button type='submit'>Add User</Button>
-				<Button>Clear Form</Button>
-			</div>
+			<Button type='submit'>Add User</Button>
+
 			
 		</form>
 	)
