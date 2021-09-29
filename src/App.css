@@ -2,7 +2,18 @@
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	justify-content: center;
-	align-items: top;
+	flex-direction: column;
+	justify-content: top;
+	align-items: center;
 	margin-top: 2em;
+	gap: 2em;
+}
+
+@media (max-width: 650px) {
+	.app{
+		gap: 1em;
+	}
+	.app > * {
+		width: 100%;
+	}
 }

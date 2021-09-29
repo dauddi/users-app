@@ -1,7 +1,7 @@
 .users__container {
 	width: auto;
 	height: fit-content;
-	padding: 2em;
+	padding:  0 2em;
 	border: 0;
 	border-radius: .5em;
 	background-color: #e9c46a;

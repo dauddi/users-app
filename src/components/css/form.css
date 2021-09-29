@@ -29,9 +29,9 @@
 @media (max-width: 650px) {
 	.form-control{
 		width: auto;
-		margin: 0 2px;
+		margin: 0 .8em;
 		padding: .8em;
-		font-size: 14px;
+		font-size: 13px;
 	}
 	.form-control .form-group.form-group-btn{
 		display: block;

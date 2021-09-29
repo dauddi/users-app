@@ -1,0 +1,11 @@
+.user__item {
+	width: auto;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: baseline;
+	gap: 2em;
+	border-bottom: 1px solid #264653;
+	border-radius: .2em;
+	padding: 0 .3em;
+}
