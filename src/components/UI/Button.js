@@ -4,7 +4,7 @@ import './css/button.css'
 function Button(props){
 
 	return (
-		<button className="form-btn" type="submit">
+		<button type={props.type} className="form-btn">
 			{props.children}
 		</button>
 	)

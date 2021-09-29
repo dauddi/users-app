@@ -6,7 +6,7 @@ function UserList(props){
 	
 	return (
 		<UsersContainer>
-			{ props.data.map(obj => <UserListItem data={obj} />) }
+			{ props.data.map(obj => <UserListItem key={Math.random()} data={obj} />) }
 		</UsersContainer>
 	)
 }
