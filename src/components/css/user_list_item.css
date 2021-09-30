@@ -9,3 +9,13 @@
 	border-radius: .2em;
 	padding: 0 .3em;
 }
+
+.user__item > .btn__delete {
+	background: transparent;
+	border: 0;
+}
+.user__item > .btn__delete:hover {
+	cursor:pointer;
+	font-size: larger;
+}
+

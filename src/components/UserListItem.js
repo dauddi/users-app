@@ -1,9 +1,10 @@
 import React from "react";
 import './css/user_list_item.css'
-import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { Avatar } from '@mui/material';
 
 function UserListItem(props){
+
 	const stringToColor = (string) => {
 		let hash = 0;
 		let i;
@@ -31,12 +32,19 @@ function UserListItem(props){
 		  children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
 		};
 	  }
+
 	return (
 		<div className="user__item">
 			<Avatar {...stringAvatar(props.data.name)}/>
 			<h3>{props.data.name}</h3>
 			<p><em>{props.data.age} Years</em></p>
-			<button>{<DeleteOutlineIcon role="button"/>}</button>
+			<button onClick={() => {
+				let bufferArray = [...props.dataArray];
+				bufferArray.pop(props.data);
+				props.updateCurrentState([...bufferArray]);
+			}} className="btn__delete">
+				{<DeleteIcon titleAccess="Delete" color="warning" fontSize="large" role="button"/>}
+			</button>
 		</div>
 	)
 }

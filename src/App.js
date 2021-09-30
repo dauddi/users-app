@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div className="app">
 			<Form updateUserState={setUserState} currentState={[...userState]}/>
-			<UserList  data={userState}/>
+			<UserList updateUserState={setUserState} data={userState}/>
 		</div>
 	)
 }
