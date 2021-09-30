@@ -5,13 +5,14 @@ import User from "../Classes/UserClass";
 
 function Form(props){
 	let newUser;
+	let id;
 	const [nameInput, setNameInput] = useState('')
 	const [ageInput, setAgeInput] = useState('')
 
 	const formSubmitHandler = (e) => {
 		e.preventDefault();
 
-		if (nameInput && ageInput) newUser = new User(nameInput, ageInput)
+		if (nameInput && ageInput) newUser = new User(id, nameInput, ageInput)
 		props.updateUserState([newUser, ...props.currentState])
 		setNameInput('')
 		setAgeInput('')
@@ -22,8 +23,8 @@ function Form(props){
 			<h1>Enter User Details</h1>
 
 			<div className="form-group">
-				<label htmlFor="user_name">User Name:</label>
-				<input onChange={(e) => setNameInput(e.target.value)} value={nameInput} type="text" name="user_name" required autoCapitalize />
+				<label htmlFor="user_name">Full Name:</label>
+				<input onChange={(e) => setNameInput(e.target.value)} value={nameInput} type="text" name="user_name" required autoCapitalize="true" />
 			</div>
 
 			<div className="form-group">
